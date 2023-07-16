@@ -106,7 +106,7 @@ nav ul li a {
 
 .quick-list-images,
 .our-feature {
-  width: 50%;
+  max-width: 50%;
 }
 
 .quick-list-images {
@@ -137,8 +137,7 @@ nav ul li a {
 }
 
 .feature {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   align-items: center;
   gap: 100px;
 }
@@ -162,7 +161,7 @@ nav ul li a {
 }
 
 .feature-img img {
-  width: 90%;
+  width: 100%;
 }
 
 .btn-secondary {
@@ -201,6 +200,7 @@ nav ul li a {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .sponsor-images img {
@@ -218,10 +218,28 @@ footer h6 {
   margin: 100px auto;
 }
 
-@media (min-width: 992px) {
-}
+@media (max-width: 768px) {
+  nav,
+  .quick-list,
+  .feature,
+  .facts-card,
+  .sponsor-images {
+    flex-direction: column;
+  }
 
-@media (min-width: 768px) {
+  .feature-you,
+  .feature-img,
+  .quick-list-images,
+  .our-feature {
+    max-width: 100%;
+  }
+
+  .btn-secondary {
+    padding: 25px 35px;
+    position: relative;
+    bottom: -20px;
+    left: 0;
+  }
 }
 
 @media (max-width: 576px) {
